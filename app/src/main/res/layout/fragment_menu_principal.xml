@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MenuPrincipalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/menu_principal_toolbar"
+            layout="@layout/app_toolbar" />
+
+        <Button
+            android:backgroundTint="@color/light_blue"
+            android:id="@+id/btnAulasInstituto"
+            android:layout_margin="5dp"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Aulas do instituto"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/btn_matricular_instituto"
+            app:layout_constraintCircleRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_principal_toolbar" />
+
+        <Button
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="5dp"
+            android:id="@+id/btn_matricular_instituto"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Matricular-se no instituto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAulasInstituto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

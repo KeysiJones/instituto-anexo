@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.diasSemana.AulasTercaFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/aulas_terca_toolbar"
+            layout="@layout/back_toolbar" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            tools:context=".AulasTercaFragment">
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnPregarMeuEvangelho"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="9h - Pregar meu evangelho" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnFamiliaEterna"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="10h - Família eterna"/>
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnDoctrineCovenants"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="18h30 - Doctrine and Covenants" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnDoutrinaConvenios"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="20h - Doutrina e Convênios" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnLivroMormonJapones"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="21h - O Livro De Mórmon em Japonês" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

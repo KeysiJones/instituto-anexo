@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DiasSemanaFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/dias_semana_toolbar"
+            layout="@layout/back_toolbar" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            tools:context=".DiasSemanaFragment">
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnTercaFeira"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="Terça" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnQuartaFeira"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="Quarta"/>
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnQuintaFeira"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="Quinta" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnSabado"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="Sábado" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

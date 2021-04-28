@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.diasSemana.AulasQuartaFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/aulas_quarta_toolbar"
+            layout="@layout/back_toolbar" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            tools:context=".AulasTercaFragment">
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnDoctrinaConvenios"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="19h - Doctrina y Convenios (Español)" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnParabolasJesus"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="19h - Curso da Bíblia: As Parábolas de Jesus"/>
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnPresNelson"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="20h - Ensinamentos de Russell M. Nelson" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

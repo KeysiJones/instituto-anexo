@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.diasSemana.AulasSabadoFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/aulas_sabado_toolbar"
+            layout="@layout/back_toolbar" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            tools:context=".AulasSabadoFragment">
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnHinosUltimosDias"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="8h - Hinos dos últimos dias"/>
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnPregarMeuEvangelho"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="9h - Pregar Meu Evangelho"/>
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnDoutrinaConvenios"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="10h30 - Doutrina &amp; Convênios" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnFamiliaEterna"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="14h - A Família Eterna" />
+
+            <Button
+                android:backgroundTint="@color/light_blue"
+                android:layout_margin="1dp"
+                android:id="@+id/btnDoutrinasEvangelho"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="15h - Doutrinas do Evangelho, Parte 1" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
