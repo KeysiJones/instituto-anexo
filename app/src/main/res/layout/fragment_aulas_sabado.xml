@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.diasSemana.AulasSabadoFragment">
 
-    <RelativeLayout
-        android:id="@+id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <include
-            android:id="@+id/aulas_sabado_toolbar"
-            layout="@layout/back_toolbar" />
-
-    </RelativeLayout>
-    <ScrollView
-        android:layout_below="@id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_height="match_parent"
             tools:context=".AulasSabadoFragment">
 
+            <include
+                android:id="@+id/aulas_sabado_toolbar"
+                layout="@layout/back_toolbar" />
+
             <Button
+                app:layout_constraintTop_toBottomOf="@id/aulas_sabado_toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnPregarMeuEvangelho"
                 android:backgroundTint="@color/light_blue"
                 android:layout_margin="1dp"
                 android:id="@+id/btnHinosUltimosDias"
@@ -38,6 +28,10 @@
                 android:text="8h - Hinos dos últimos dias"/>
 
             <Button
+                app:layout_constraintTop_toBottomOf="@id/btnHinosUltimosDias"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnDoutrinaConvenios"
                 android:backgroundTint="@color/light_blue"
                 android:layout_margin="1dp"
                 android:id="@+id/btnPregarMeuEvangelho"
@@ -46,6 +40,10 @@
                 android:text="9h - Pregar Meu Evangelho"/>
 
             <Button
+                app:layout_constraintTop_toBottomOf="@id/btnPregarMeuEvangelho"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnFamiliaEterna"
                 android:backgroundTint="@color/light_blue"
                 android:layout_margin="1dp"
                 android:id="@+id/btnDoutrinaConvenios"
@@ -54,6 +52,10 @@
                 android:text="10h30 - Doutrina &amp; Convênios" />
 
             <Button
+                app:layout_constraintTop_toBottomOf="@id/btnDoutrinaConvenios"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnDoutrinasEvangelho"
                 android:backgroundTint="@color/light_blue"
                 android:layout_margin="1dp"
                 android:id="@+id/btnFamiliaEterna"
@@ -62,6 +64,10 @@
                 android:text="14h - A Família Eterna" />
 
             <Button
+                app:layout_constraintTop_toBottomOf="@id/btnFamiliaEterna"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:backgroundTint="@color/light_blue"
                 android:layout_margin="1dp"
                 android:id="@+id/btnDoutrinasEvangelho"
@@ -69,6 +75,5 @@
                 android:layout_height="70dp"
                 android:text="15h - Doutrinas do Evangelho, Parte 1" />
 
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
