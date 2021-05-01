@@ -29,9 +29,13 @@ class AulasQuintaFragment : Fragment() {
         val toolbar = binding.aulasQuintaToolbar.appToolbar
 
         activity?.setActionBar(toolbar)
-        activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
         activity?.actionBar?.title = "Quinta-feira"
-        setHasOptionsMenu(true)
+        //setHasOptionsMenu(true)
+        //activity?.actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+
+        toolbar.setNavigationOnClickListener { view ->
+            activity?.onBackPressed()
+        }
 
         binding.btnFamiliaEterna.setOnClickListener {
             Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()

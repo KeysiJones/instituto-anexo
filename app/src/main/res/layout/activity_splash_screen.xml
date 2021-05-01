@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
         android:gravity="center"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif"
         android:textColor="#fff"
         android:textSize="30dp" />
 

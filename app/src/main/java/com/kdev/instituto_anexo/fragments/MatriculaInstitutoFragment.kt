@@ -52,10 +52,12 @@ class MatriculaInstitutoFragment : Fragment() {
         val toolbar = binding.matriculaInstitutoToolbar.appToolbar
 
         activity?.setActionBar(toolbar)
-
-        activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
         activity?.actionBar?.title = "Matricula"
-        setHasOptionsMenu(true)
+        //setHasOptionsMenu(true)
+
+        toolbar.setNavigationOnClickListener { view ->
+            activity?.onBackPressed()
+        }
 
         return binding.root.rootView
     }

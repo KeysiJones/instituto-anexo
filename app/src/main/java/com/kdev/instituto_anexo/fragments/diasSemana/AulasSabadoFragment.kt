@@ -29,9 +29,12 @@ class AulasSabadoFragment : Fragment() {
         val toolbar = binding.aulasSabadoToolbar.appToolbar
 
         activity?.setActionBar(toolbar)
-        activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
         activity?.actionBar?.title = "Sábado"
-        setHasOptionsMenu(true)
+        //setHasOptionsMenu(true)
+
+        toolbar.setNavigationOnClickListener { view ->
+            activity?.onBackPressed()
+        }
 
         binding.btnHinosUltimosDias.setOnClickListener {
             Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()

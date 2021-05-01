@@ -2,8 +2,10 @@ package com.kdev.instituto_anexo.fragments
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import android.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import com.kdev.instituto_anexo.R
 import com.kdev.instituto_anexo.databinding.FragmentDiasSemanaBinding
@@ -40,9 +42,15 @@ class DiasSemanaFragment : Fragment() {
         val toolbar = binding.diasSemanaToolbar.appToolbar
 
         activity?.setActionBar(toolbar)
-        activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
+        //activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
         activity?.actionBar?.title  = "Dias de instituto !!"
-        setHasOptionsMenu(true)
+        //activity?.actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+
+        toolbar.setNavigationOnClickListener { view ->
+            activity?.onBackPressed()
+        }
+
+        //setHasOptionsMenu(true)
 
         binding.btnTercaFeira.setOnClickListener {
             findNavController().navigate(R.id.action_diasSemanaFragment_to_aulasTercaFragment)
@@ -70,6 +78,7 @@ class DiasSemanaFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         activity?.onBackPressed()
+        Toast.makeText(context, "ola, teste", Toast.LENGTH_SHORT).show()
         return true
     }
 }

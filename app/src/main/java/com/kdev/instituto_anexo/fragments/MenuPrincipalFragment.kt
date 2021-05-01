@@ -1,17 +1,13 @@
 package com.kdev.instituto_anexo.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import com.kdev.instituto_anexo.R
 import com.kdev.instituto_anexo.databinding.FragmentMenuPrincipalBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -19,19 +15,24 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class MenuPrincipalFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val binding = FragmentMenuPrincipalBinding.inflate(inflater)
-        val toolbar = binding.menuPrincipalToolbar.appToolbar
 
+        //Colocar um menu no futuro
+
+        val toolbar = binding.menuPrincipalToolbar.appToolbar
         activity?.setActionBar(toolbar)
-        activity?.actionBar?.setDisplayShowHomeEnabled(true)
-        setHasOptionsMenu(true)
+        activity?.actionBar?.title = " Instituto Anexo"
+        activity?.actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_favorite_border_24)
+
+        //setHasOptionsMenu(true)
+
+        toolbar.setNavigationOnClickListener {
+            Toast.makeText(context, "Faça do Instituto uma prioridade...", Toast.LENGTH_LONG).show()
+        }
 
         binding.btnMatricularInstituto.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipalFragment_to_matriculaInstitutoFragment)
@@ -41,10 +42,10 @@ class MenuPrincipalFragment : Fragment() {
             findNavController().navigate(R.id.action_menuPrincipalFragment_to_diasSemanaFragment)
         }
 
-        toolbar.setNavigationOnClickListener { view ->
-            val myDrawerMenu = activity?.findViewById<DrawerLayout>(R.id.drawerLayout)
-            myDrawerMenu?.openDrawer(Gravity.LEFT)
-        }
+//        toolbar.setNavigationOnClickListener { view ->
+//            val myDrawerMenu = activity?.findViewById<DrawerLayout>(R.id.drawerLayout)
+//            myDrawerMenu?.openDrawer(Gravity.LEFT)
+//        }
 
         return binding.root.rootView
     }

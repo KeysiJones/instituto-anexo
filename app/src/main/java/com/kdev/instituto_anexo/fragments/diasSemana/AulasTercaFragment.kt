@@ -29,10 +29,13 @@ class AulasTercaFragment : Fragment() {
         val toolbar = binding.aulasTercaToolbar.appToolbar
 
         activity?.setActionBar(toolbar)
-        activity?.actionBar?.setDisplayHomeAsUpEnabled(true)
         activity?.actionBar?.title = "Terça-Feira"
 
-        setHasOptionsMenu(true)
+        //setHasOptionsMenu(true)
+
+        toolbar.setNavigationOnClickListener { view ->
+            activity?.onBackPressed()
+        }
 
         binding.btnPregarMeuEvangelho.setOnClickListener {
             Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
