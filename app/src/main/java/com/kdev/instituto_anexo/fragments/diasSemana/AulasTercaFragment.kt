@@ -38,27 +38,27 @@ class AulasTercaFragment : Fragment() {
         }
 
         binding.btnPregarMeuEvangelho.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/95927244033?pwd=TkZLeU1MY2d5eUpqeTJ5WUJTRHlVUT09")
         }
 
         binding.btnFamiliaEterna.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/95927244033?pwd=TkZLeU1MY2d5eUpqeTJ5WUJTRHlVUT09")
         }
 
         binding.btnDoctrineCovenants.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/94056241793?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09")
         }
 
         binding.btnDoutrinaConvenios.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/99543622475?pwd=TkZLeU1MY2d5eUpqeTJ5WUJTRHlVUT09")
         }
 
         binding.btnLivroMormonJapones.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/94056241793?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09")
         }
 

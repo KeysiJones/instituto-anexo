@@ -39,17 +39,17 @@ class AulasQuartaFragment : Fragment() {
         //setHasOptionsMenu(true)
 
         binding.btnDoctrinaConvenios.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/94056241793?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09")
         }
 
         binding.btnParabolasJesus.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/95927244033?pwd=TkZLeU1MY2d5eUpqeTJ5WUJTRHlVUT09")
         }
 
         binding.btnPresNelson.setOnClickListener {
-            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Abrindo o Zoom... aguarde", Toast.LENGTH_LONG).show()
             launchZoomUrl("https://zoom.us/j/93337211696?pwd=dTVreXJLQXFzdVNrTUp0aVpZUzdJUT09")
         }
 
