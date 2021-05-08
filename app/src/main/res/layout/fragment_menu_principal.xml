@@ -13,7 +13,7 @@
 
         <include
             android:id="@+id/menu_principal_toolbar"
-            layout="@layout/app_toolbar" />
+            layout="@layout/back_toolbar" />
 
         <Button
             android:backgroundTint="@color/light_blue"

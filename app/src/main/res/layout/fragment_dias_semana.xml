@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,63 +7,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DiasSemanaFragment">
 
-    <RelativeLayout
-        android:id="@+id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <include
             android:id="@+id/dias_semana_toolbar"
             layout="@layout/back_toolbar" />
 
-    </RelativeLayout>
-    <ScrollView
-        android:layout_below="@id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            tools:context=".DiasSemanaFragment">
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/dias_semana_toolbar"
+            app:layout_constraintBottom_toTopOf="@id/btnQuartaFeira"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="1dp"
+            android:id="@+id/btnTercaFeira"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Terça" />
 
-            <Button
-                android:backgroundTint="@color/light_blue"
-                android:layout_margin="1dp"
-                android:id="@+id/btnTercaFeira"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:text="Terça" />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/btnTercaFeira"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnQuintaFeira"
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="1dp"
+            android:id="@+id/btnQuartaFeira"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Quarta"/>
 
-            <Button
-                android:backgroundTint="@color/light_blue"
-                android:layout_margin="1dp"
-                android:id="@+id/btnQuartaFeira"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:text="Quarta"/>
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/btnQuartaFeira"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnSabado"
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="1dp"
+            android:id="@+id/btnQuintaFeira"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Quinta" />
 
-            <Button
-                android:backgroundTint="@color/light_blue"
-                android:layout_margin="1dp"
-                android:id="@+id/btnQuintaFeira"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:text="Quinta" />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/btnQuintaFeira"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="1dp"
+            android:id="@+id/btnSabado"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Sábado" />
 
-            <Button
-                android:backgroundTint="@color/light_blue"
-                android:layout_margin="1dp"
-                android:id="@+id/btnSabado"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:text="Sábado" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-    </ScrollView>
-
-
-</RelativeLayout>
+</FrameLayout>

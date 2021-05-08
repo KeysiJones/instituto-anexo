@@ -11,45 +11,11 @@
         android:label="fragment_menu_principal"
         tools:layout="@layout/fragment_menu_principal" >
         <action
-            android:id="@+id/action_menuPrincipalFragment_to_oracoesDedicatoriasFragment"
-            app:destination="@id/oracoesDedicatoriasFragment" />
-        <action
-            android:id="@+id/action_menuPrincipalFragment_to_bencaosSacerdocioFragment"
-            app:destination="@id/bencaosSacerdocioFragment" />
-        <action
             android:id="@+id/action_menuPrincipalFragment_to_matriculaInstitutoFragment"
             app:destination="@id/matriculaInstitutoFragment" />
         <action
             android:id="@+id/action_menuPrincipalFragment_to_diasSemanaFragment"
             app:destination="@id/diasSemanaFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/oracoesDedicatoriasFragment"
-        android:name="com.kdev.instituto_anexo.fragments.OracoesDedicatoriasFragment"
-        android:label="fragment_oracoes_dedicatorias"
-        tools:layout="@layout/fragment_oracoes_dedicatorias" >
-
-    </fragment>
-    <fragment
-        tools:layout="@layout/fragment_bencaos_sacerdocio"
-        android:id="@+id/bencaosSacerdocioFragment"
-        android:name="com.kdev.instituto_anexo.fragments.BencaosSacerdocioFragment"
-        android:label="BencaosSacerdocioFragment" >
-        <action
-            android:id="@+id/action_bencaosSacerdocioFragment_to_bencaosDetailFragment"
-            app:destination="@id/bencaosDetailFragment" />
-    </fragment>
-    <fragment
-        tools:layout="@layout/fragment_aulas_terca"
-        android:id="@+id/bencaosDetailFragment"
-        android:name="com.kdev.instituto_anexo.fragments.BencaosDetailFragment"
-        android:label="BencaosDetailFragment" >
-        <argument
-            android:name="title"
-            app:argType="string" />
-        <argument
-            android:name="blessing"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/matriculaInstitutoFragment"
@@ -78,41 +44,20 @@
         android:id="@+id/aulasTercaFragment"
         android:name="com.kdev.instituto_anexo.fragments.diasSemana.AulasTercaFragment"
         android:label="fragment_aulas_terca"
-        tools:layout="@layout/fragment_aulas_terca" >
-        <action
-            android:id="@+id/action_aulasTercaFragment_to_aulasZoomFragment"
-            app:destination="@id/aulasZoomFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/aulasZoomFragment"
-        android:name="com.kdev.instituto_anexo.fragments.diasSemana.AulasZoomFragment"
-        android:label="fragment_aulas_zoom"
-        tools:layout="@layout/fragment_aulas_zoom" />
+        tools:layout="@layout/fragment_aulas_terca" />
     <fragment
         android:id="@+id/aulasQuartaFragment"
         android:name="com.kdev.instituto_anexo.fragments.diasSemana.AulasQuartaFragment"
         android:label="fragment_aulas_quarta"
-        tools:layout="@layout/fragment_aulas_quarta" >
-        <action
-            android:id="@+id/action_aulasQuartaFragment_to_aulasZoomFragment"
-            app:destination="@id/aulasZoomFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_aulas_quarta" />
     <fragment
         android:id="@+id/aulasQuintaFragment"
         android:name="com.kdev.instituto_anexo.fragments.diasSemana.AulasQuintaFragment"
         android:label="fragment_aulas_quinta"
-        tools:layout="@layout/fragment_aulas_quinta" >
-        <action
-            android:id="@+id/action_aulasQuintaFragment_to_aulasZoomFragment"
-            app:destination="@id/aulasZoomFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_aulas_quinta" />
     <fragment
         android:id="@+id/aulasSabadoFragment"
         android:name="com.kdev.instituto_anexo.fragments.diasSemana.AulasSabadoFragment"
         android:label="fragment_aulas_sabado"
-        tools:layout="@layout/fragment_aulas_sabado" >
-        <action
-            android:id="@+id/action_aulasSabadoFragment_to_aulasZoomFragment"
-            app:destination="@id/aulasZoomFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_aulas_sabado" />
 </navigation>
