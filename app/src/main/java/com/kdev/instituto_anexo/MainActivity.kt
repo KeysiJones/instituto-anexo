@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
                     launchWppUrl("https://api.whatsapp.com/send/?phone=5551985236176&text=Oi&app_absent=0")
                 }
 
-                R.id.menu_cancel_nav_view -> {
-                    Toast.makeText(this, "Para fechar, deslize para a esquerda", Toast.LENGTH_LONG).show()
-                }
+//                R.id.menu_cancel_nav_view -> {
+//                    Toast.makeText(this, "Para fechar, deslize para a esquerda", Toast.LENGTH_LONG).show()
+//                }
 
                 else -> {
                     Toast.makeText(this, "Else", Toast.LENGTH_SHORT).show()

@@ -10,12 +10,12 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        val handle: Handler = Handler();
+        val handle = Handler();
 
         handle.postDelayed({
             mostrarTelaInicial();
             finish();
-        }, 2000);
+        }, 1500);
     }
 
     private fun mostrarTelaInicial() {
